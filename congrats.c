@@ -20,6 +20,13 @@ void spellOut(const char* message, int delay) {
 }
 
 int main() {
+    #ifdef _WIN32
+        system("cls");
+        Sleep(1500);
+    #else
+        system("clear");
+        usleep(1500 * 1000);
+    #endif
     char gameOver[] = "Congratulations! You have completed the game.\n\n";
     spellOut(gameOver, 100);
     #ifdef _WIN32
@@ -39,10 +46,11 @@ int main() {
     if (exitAction == 'R' || exitAction == 'r') {
         #ifdef _WIN32
             system("cls");
+            system("main.exe");
         #else
             system("clear");
+            system("./main");
         #endif
-        system("main.exe");
     } else if (exitAction == 'E' || exitAction == 'e') {
         printf("Exit with [Enter]...\n");
     #ifdef _WIN32

@@ -44,14 +44,19 @@ int menu() {
   if (strcmp(choice, "S") == 0 || strcmp(choice, "s") == 0) {
     #ifdef _WIN32
       system("cls");
+      system("game1.exe");
     #else
       system("clear");
+      system("./game1");
     #endif
-    system("game1.exe");
   } else if (strcmp(choice, "E") == 0 || strcmp(choice, "e") == 0) {
       system("exit");
   } else if (strcmp(choice, "D") == 0 || strcmp(choice, "d") == 0) {
-      system("start docs.html > nul");
+      #ifdef _WIN32
+          system("start docs.html > nul");
+      #else
+          system("xdg-open docs.html");
+      #endif
       goto restart;
   } else if (strcmp(choice, "sh") == 0 || strcmp(choice, "Sh") == 0|| strcmp(choice, "SH") == 0) {
     char shush[] = "How dare you tell me to shush? ";

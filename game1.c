@@ -111,7 +111,6 @@ int gameRoom1() {
     int foundKey = 0;
     const char *inv[] = { "Note", "Key",};
     size_t count = sizeof(inv) / sizeof(inv[0]);
-
     #ifdef _WIN32
         system("cls");
     #else
@@ -298,7 +297,11 @@ int gameRoom1() {
     } else if (action == 'E' || action == 'e') {
         printf("Exit with [Enter]...\n");
         printf(":");
-        system("pause > nul");
+        #ifdef _WIN32
+            system("pause > nul");
+        #else
+            system("sleep 5");
+        #endif
         return 1;
     }
     return gameRoom2();
@@ -333,9 +336,17 @@ int main() {
     intro();
     int x = gameRoom1();
     if(x == finalRoom) {
-        system("congrats.exe");
+        #ifdef _WIN32
+            system("congrats.exe");
+        #else
+            system("./congrats");
+        #endif
     } else if(x == 0) {
-        system("main.exe");
+        #ifdef _WIN32
+            system("main.exe");
+        #else
+            system("./main");
+        #endif
     } else {
         goto exit;
     }
