@@ -110,6 +110,11 @@ int intro() {
     return 0;
 }
 
+int gameEnd() {
+    credits();
+    return 0;
+}
+
 int gameRoom5() {
     gameEnd();
     return 5;
@@ -327,11 +332,6 @@ int gameRoom1() {
         return 1;
     }
     return gameRoom2();
-}
-
-int gameEnd() {
-    credits();
-    return 0;
 }
 
 int main() {
