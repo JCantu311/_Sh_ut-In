@@ -40,7 +40,7 @@ int menu() {
   }
   char choice[2];
   printf(":");
-  scanf(" %s", &choice);
+  scanf(" %s", choice);
   if (strcmp(choice, "S") == 0 || strcmp(choice, "s") == 0) {
     #ifdef _WIN32
       system("cls");

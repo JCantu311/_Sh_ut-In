@@ -110,6 +110,24 @@ int intro() {
     return 0;
 }
 
+int gameRoom5() {
+    gameEnd();
+    return 5;
+}
+
+int gameRoom4() {
+    return gameRoom5();
+}
+
+int gameRoom3() {
+    return gameRoom4();
+}
+
+int gameRoom2() {
+    printf("PLACEHOLDER: unfinished\n");
+    return gameRoom3();
+}
+
 int gameRoom1() {
     int seenDoor = 0;
     int foundKey = 0;
@@ -309,24 +327,6 @@ int gameRoom1() {
         return 1;
     }
     return gameRoom2();
-}
-
-int gameRoom2() {
-    printf("PLACEHOLDER: unfinished\n");
-    return gameRoom3();
-}
-
-int gameRoom3() {
-    return gameRoom4();
-}
-
-int gameRoom4() {
-    return gameRoom5();
-}
-
-int gameRoom5() {
-    gameEnd();
-    return 5;
 }
 
 int gameEnd() {
