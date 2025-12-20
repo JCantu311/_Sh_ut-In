@@ -76,11 +76,15 @@ int menu() {
         #endif
         printf(".");
     }
+    printf("\n");
     #ifdef _WIN32
       Sleep(200);
+      system("cls");
     #else
       usleep(200 * 1000);
+      system("clear");
     #endif
+    system("exit");
   } else {
     goto restart;
   }

@@ -52,7 +52,11 @@ void credits() {
     creditsNewLineDelay(1000);
 
     printf("Goodbye.\n");
-    Sleep(1500);
+    #ifdef _WIN32
+        Sleep(1500);
+    #else
+        usleep(1500 * 1000);
+    #endif
     printf("You may now exit by pressing [Enter]...\n");
     printf(":");
     #ifdef _WIN32
