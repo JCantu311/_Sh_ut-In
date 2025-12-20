@@ -51,6 +51,7 @@ int menu() {
     #endif
   } else if (strcmp(choice, "E") == 0 || strcmp(choice, "e") == 0) {
       system("exit");
+      system("clear");
   } else if (strcmp(choice, "D") == 0 || strcmp(choice, "d") == 0) {
       #ifdef _WIN32
           system("start docs.html > nul");
