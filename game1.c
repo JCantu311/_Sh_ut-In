@@ -16,6 +16,7 @@ void spellOut(const char* message, int delay) {
         #ifdef _WIN32
             Sleep(delay);
         #else
+            fflush(stdout);
             usleep(delay * 1000);
         #endif
     }
