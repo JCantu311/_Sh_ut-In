@@ -26,6 +26,7 @@ void creditsNewLineDelay(int delay) {
     #ifdef _WIN32
         Sleep(delay);
     #else
+        fflush(stdout);
         usleep(delay * 1000);
     #endif
     printf("\n");
@@ -56,6 +57,7 @@ void credits() {
     #ifdef _WIN32
         Sleep(1500);
     #else
+        fflush(stdout);
         usleep(1500 * 1000);
     #endif
     printf("You may now exit by pressing [Enter]...\n");
@@ -71,6 +73,7 @@ int intro() {
     #ifdef _WIN32
         Sleep(100);
     #else
+        fflush(stdout);
         usleep(100 * 1000);
     #endif
     char welcome[] = "Welcome.\n\n";
@@ -78,6 +81,7 @@ int intro() {
     #ifdef _WIN32
         Sleep(3000);
     #else
+        fflush(stdout);
         usleep(3000 * 1000);
     #endif
     char startMessage[] = "The game starts now.\n";
@@ -85,6 +89,7 @@ int intro() {
     #ifdef _WIN32
         Sleep(10000);
     #else
+        fflush(stdout);
         usleep(10000 * 1000);
     #endif
     printf("\n");
@@ -94,6 +99,7 @@ int intro() {
         #ifdef _WIN32
             Sleep(300);
         #else
+            fflush(stdout);
             usleep(300 * 1000);
         #endif
         printf(".");
@@ -219,6 +225,7 @@ int gameRoom1() {
             #ifdef _WIN32
                 Sleep(1100);
             #else
+                fflush(stdout);
                 usleep(900 * 1000);
             #endif
             #ifdef _WIN32
@@ -231,6 +238,7 @@ int gameRoom1() {
             #ifdef _WIN32
                 Sleep(1500);
             #else
+                fflush(stdout);
                 usleep(1500 * 1000);
             #endif
             return 0;
@@ -319,6 +327,7 @@ int gameRoom1() {
         #ifdef _WIN32
             Sleep(1500);
         #else
+            fflush(stdout);
             usleep(1500 * 1000);
         #endif
         return 0;
