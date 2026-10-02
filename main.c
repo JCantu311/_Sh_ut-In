@@ -67,6 +67,7 @@ int menu() {
     #ifdef _WIN32
       Sleep(500);
     #else
+      fflush(stdout);
       usleep(500 * 1000);
     #endif
     spellOut(terminating, 85);
@@ -74,6 +75,7 @@ int menu() {
         #ifdef _WIN32
           Sleep(300);
         #else
+          fflush(stdout);
           usleep(300 * 1000);
         #endif
         printf(".");
@@ -83,6 +85,7 @@ int menu() {
       Sleep(200);
       system("cls");
     #else
+      fflush(stdout);
       usleep(200 * 1000);
       system("clear");
     #endif
