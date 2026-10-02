@@ -26,6 +26,7 @@ int main() {
         Sleep(1500);
     #else
         system("clear");
+        fflush(stdout);
         usleep(1500 * 1000);
     #endif
     char gameOver[] = "Congratulations! You have completed the game.\n\n";
@@ -33,6 +34,7 @@ int main() {
     #ifdef _WIN32
         Sleep(1500);
     #else
+        fflush(stdout);
         usleep(1500 * 1000);
     #endif
     char exitChoice[] = "What do you do?\n\n";
